@@ -1,0 +1,38 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url 'https://developer.huawei.com/repo/' }
+        maven {
+            url 'https://maven-dev.tcmppcloud.com/fHKFBbEjd/repository/maven-public/'
+        }
+        maven {
+            url 'https://tcmpp-work-maven.pkg.coding.net/repository/tcmpp/android/'
+        }
+//        mavenLocal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://developer.huawei.com/repo/' }
+        maven { url "https://jitpack.io" }
+        maven {
+            url 'https://maven-dev.tcmppcloud.com/fHKFBbEjd/repository/maven-public/'
+        }
+
+        maven {
+            url 'https://tcmpp-work-maven.pkg.coding.net/repository/tcmpp/android/'
+        }
+        maven { url "${rootProject.projectDir}/offline_sdks/tcmpp-local-repo/"}
+//        mavenLocal()
+    }
+}
+
+rootProject.name = "TCMPP-Demo"
+include ':app'
+include ':tcmppdf'
